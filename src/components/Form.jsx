@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Form.css";
 import {
   TextField,
   Button,
@@ -48,7 +49,9 @@ const MyForm = () => {
     <Box
       component="span"
       sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+      className="form-container"
     >
+      <h1>Enter your latest health problem</h1>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -79,9 +82,17 @@ const MyForm = () => {
               type="file"
               onChange={handleFileChange}
             />
+            <label htmlFor="file" className="file-upload-label">
+              Upload PDF
+            </label>
           </Grid>
           <Grid item xs={12}>
-            <Button variant="contained" color="primary" type="submit">
+            <Button
+              variant="contained"
+              color="primary"
+              type="submit"
+              className="submit-button"
+            >
               Submit
             </Button>
           </Grid>

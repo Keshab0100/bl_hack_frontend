@@ -5,7 +5,7 @@ import SelectDate from "../components/SelectDate";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{background: "#f0f0f0", padding: "1rem", display: "flex",flexDirection: "column", alignItems: "center"}}>
       <SelectDate />
       <MyForm />
       <TimelineUI />
